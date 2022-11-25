@@ -11,6 +11,12 @@ flowchart TD
    D --> E{Select The Record where Due Date Matches the Pay Date}
    E -->|YES| F[[3Select the record that satisfied the Above Condition\n Press 'd' to detail it]] 
    E -->|NO| G((4))
+   E -->|If the Records are Empty|G1[[You had Entered into table but it is empty then\n Back to BGIR Screen and Enter FUND , ASSET\n In Income INT/DIV place Enter C\n C means Closed]]
+
+   G1 -->G2{Select the record where the Due Date \n Matches \nThe Pay Date of Record}
+   G2 -->|YES|G3{press 'd' and Enter into it\nSee the Screen\nIF\n CNCL RPT > REPORT DT}
+   G3 -->|YES| G4{{You Should Close the Request by\n See the SOP at page 26}}
+
 
    F --> H{After Detailing Note down INC STATUS: and REPORT DT fields \n Check the Condition}
    H --> |if INC STATUS == O|I{IF \nINC STATUS == O\nAND\n6REPORT DATE is before the as-of Date of the report}
