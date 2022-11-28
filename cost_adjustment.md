@@ -14,7 +14,7 @@
 
 ```mermaid
 flowchart TD
-    A([Start]) --> B[[<a href='#1'>check for 1</a>]]
+    A([Start]) --> B[[<a name='#1'>check for 1</a>]]
     B --> C[[<a href='#2'>check for 2</a>]]
     C --> D([<a href='#3'>Open MCH 3</a>])
     D --> E([<a href='#4'>Type BCMC and Fill 4</a>])
